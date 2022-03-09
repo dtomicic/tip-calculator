@@ -35,11 +35,6 @@
                 font-family: $mainFont;
                 color: $dgCyan;
                 font-size: toRem(16);
-
-                &.hidden {
-                    font-size: toRem(14);
-                    display: none;
-                }
             }
 
             &InpBox {
@@ -170,8 +165,17 @@
     }
 }
 
+#zeroCheck {
+    font-size: toRem(14);
+    display: none;
+}
+
 .container {
     max-width: toRem(377);
+}
+
+.shown {
+    display: block!important;
 }
 
 // Breakpoints
@@ -202,7 +206,7 @@
 
         &OutputSection{
             width: 50%;
-            gap: toRem(92);
+            gap: toRem(95);
         }
     }
 }

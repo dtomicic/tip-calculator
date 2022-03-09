@@ -71,11 +71,6 @@
   font-size: 1rem;
 }
 
-.main__bigBoxInputSectionHeader.hidden {
-  font-size: 0.875rem;
-  display: none;
-}
-
 .main__bigBoxInputSectionInpBox {
   background-color: #f4fafa;
   border: 0;
@@ -251,8 +246,17 @@
   background-color: rgba(255, 255, 255, 0.7);
 }
 
+#zeroCheck {
+  font-size: 0.875rem;
+  display: none;
+}
+
 .container {
   max-width: 23.5625rem;
+}
+
+.shown {
+  display: block !important;
 }
 
 @media (min-width: 1440px) {
@@ -280,7 +284,7 @@
   }
   .main__bigBoxOutputSection {
     width: 50%;
-    gap: 5.75rem;
+    gap: 5.9375rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
