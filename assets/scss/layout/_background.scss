@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
+    height: 100vh;
     background-color: $lgCyan;
 
     &__logo {
@@ -118,6 +120,12 @@
             color: $white;
             gap: toRem(25);
 
+            &Amounts {
+                display: flex;
+                flex-direction: column;
+                gap: toRem(30);
+            }
+
             &Item {
                 display: flex;
                 justify-content: space-between;
@@ -164,4 +172,37 @@
 
 .container {
     max-width: toRem(377);
+}
+
+// Breakpoints
+
+@media (min-width: $breakDesktop) {
+    .container {
+        max-width: toRem(900);
+        margin-bottom: toRem(100);
+    }
+    .main__bigBox {
+        flex-direction: row;
+
+        &InputSection {
+            width: 50%;
+
+            &InpBox {
+                width: 90%;
+            }
+
+            &Tip {
+                width: 99%;
+
+                &PresetsItem {
+                    width: 25%;
+                }
+            }
+        }
+
+        &OutputSection{
+            width: 50%;
+            gap: toRem(92);
+        }
+    }
 }
