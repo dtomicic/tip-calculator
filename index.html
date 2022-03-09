@@ -24,19 +24,19 @@
                         <h3 class="main__bigBoxInputSectionHeader">Select Tip %</h3>
                         <div class="main__bigBoxInputSectionTipPresets">
                             <div class="main__bigBoxInputSectionTipPresetsItem">
-                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader">5%</h4>
+                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader" id="5p">5%</h4>
                             </div>
                             <div class="main__bigBoxInputSectionTipPresetsItem">
-                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader">10%</h4>
+                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader" id="10p">10%</h4>
                             </div>
                             <div class="main__bigBoxInputSectionTipPresetsItem">
-                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader">15%</h4>
+                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader" id="15p">15%</h4>
                             </div>
                             <div class="main__bigBoxInputSectionTipPresetsItem">
-                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader">25%</h4>
+                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader" id="25p">25%</h4>
                             </div>
                             <div class="main__bigBoxInputSectionTipPresetsItem">
-                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader">50%</h4>
+                                <h4 class="main__bigBoxInputSectionTipPresetsItemHeader" id="50p">50%</h4>
                             </div>
                             <div class="main__bigBoxInputSectionTipPresetsItem">
                                 <h4 class="main__bigBoxInputSectionTipPresetsItemHeader">Custom</h4>
@@ -47,7 +47,7 @@
                     <div class="main__bigBoxInputSectionPeople">
                         <div class="main__bigBoxInputSectionPeopleHeading">
                             <h3 class="main__bigBoxInputSectionHeader">Number of people</h3>
-                            <h3 class="main__bigBoxInputSectionHeader hidden">Can't be zero</h3>
+                            <h3 class="main__bigBoxInputSectionHeader" id="zeroCheck">Can't be zero</h3>
                         </div>
                         <input type="number" name="peopleNumber" id="peopleNumber" class="main__bigBoxInputSectionInpBox" dir="rtl" placeholder="0">
                         <img src="assets/images/icon-person.svg" alt="Icon of a person" class="main__bigBoxInputSectionPicture">
@@ -61,22 +61,24 @@
                                 <h3 class="main__bigBoxOutputSectionItemTextHeader">Tip amount</h3>
                                 <h3 class="main__bigBoxOutputSectionItemTextSubHeader">/ person</h3>
                             </div>
-                            <h3 class="main__bigBoxOutputSectionItemNumber">$4.27</h3>
+                            <h3 class="main__bigBoxOutputSectionItemNumber" id="tipAmount">$0.00</h3>
                         </div>
                         <div class="main__bigBoxOutputSectionItem">
                             <div class="main__bigBoxOutputSectionItemText">
                                 <h3 class="main__bigBoxOutputSectionItemTextHeader">Total</h3>
                                 <h3 class="main__bigBoxOutputSectionItemTextSubHeader">/ person</h3>
                             </div>
-                            <h3 class="main__bigBoxOutputSectionItemNumber">$4.27</h3>
+                            <h3 class="main__bigBoxOutputSectionItemNumber" id="totalAmount">$0.00</h3>
                         </div>
                     </div>
-                    <div class="main__bigBoxOutputSectionReset">
+                    <div class="main__bigBoxOutputSectionReset" id="resetBtn">
                         <h3 class="main__bigBoxOutputSectionResetHeader">RESET</h3>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
