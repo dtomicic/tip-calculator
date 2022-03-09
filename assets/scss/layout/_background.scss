@@ -1,0 +1,167 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: $lgCyan;
+
+    &__logo {
+        margin-top: toRem(60);
+        margin-bottom: toRem(35);
+    }
+
+    &__bigBox {
+        background-color: $white;
+        border-radius: toRem(20);
+        padding: toRem(20);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &InputSection {
+            width: 100%;
+
+            &Bill {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: toRem(5);
+            }
+
+            &Header {
+                font-family: $mainFont;
+                color: $dgCyan;
+                font-size: toRem(16);
+
+                &.hidden {
+                    font-size: toRem(14);
+                    display: none;
+                }
+            }
+
+            &InpBox {
+                background-color: $vlCyan;
+                border: 0;
+                opacity: 1;
+                width: 100%;
+                height: toRem(35);
+                font-family: $mainFont;
+                font-size: toRem(18);
+                color: $vdCyan;
+            }
+
+            &Picture {
+                position: relative;
+                bottom: toRem(30);
+                left: toRem(10);
+            }
+
+            &Tip {
+                display: flex;
+                flex-direction: column;
+                gap: toRem(15);
+
+                &Presets {
+                    display: flex;
+                    gap: toRem(5);
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: toRem(15);
+                    margin-bottom: toRem(30);
+
+                    &Item {
+                        background-color: $vdCyan;
+                        color: $white;
+                        font-family: $mainFont;
+                        padding: toRem(5) toRem(45);
+                        border-radius: toRem(5);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 40%;
+                        font-size: toRem(20);
+                        transition: ease-in-out 0.3s;
+
+                        &:hover {
+                            background-color: $strongCyan;
+                            color: $vdCyan;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            &People {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: toRem(5);
+
+                &Heading {
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+                    display: flex;
+                }
+            }
+    
+        }
+        
+        &OutputSection {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: $vdCyan;
+            border-radius: toRem(10);
+            padding: toRem(25) toRem(20);
+            color: $white;
+            gap: toRem(25);
+
+            &Item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: $mainFont;
+
+                &TextHeader {
+                    font-size: toRem(14);
+                }
+
+                &TextSubHeader {
+                    font-size: toRem(12);
+                    color: $gCyan;
+                }
+
+                &Number {
+                    color: $strongCyan;
+                    font-size: toRem(30);
+                }
+            }
+
+            &Reset {
+                background-color: $strongCyan;
+                padding: toRem(10) toRem(20);
+                display: flex;
+                justify-content: center;
+                font-family: $mainFont;
+                color: $vdCyan;
+                border-radius: toRem(5);
+                transition: ease-in-out 0.3s;
+
+                &Header {
+                    font-size: toRem(19);
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgba(255, 255, 255, 0.7);
+                }
+            }
+        }
+    }
+}
+
+.container {
+    max-width: toRem(377);
+}
