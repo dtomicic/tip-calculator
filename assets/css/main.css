@@ -140,6 +140,11 @@
   cursor: pointer;
 }
 
+.main__bigBoxInputSectionTipPresetsItem.active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
 .main__bigBoxInputSectionPeople {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -237,6 +242,15 @@
   transition: ease-in-out 0.3s;
 }
 
+.main__bigBoxOutputSectionReset.disabled {
+  opacity: 0.3;
+}
+
+.main__bigBoxOutputSectionReset.disabled:hover {
+  cursor: not-allowed;
+  background-color: #26c0ab;
+}
+
 .main__bigBoxOutputSectionResetHeader {
   font-size: 1.1875rem;
 }
@@ -261,7 +275,7 @@
 
 @media (min-width: 1440px) {
   .container {
-    max-width: 56.25rem;
+    max-width: 43.75rem;
     margin-bottom: 6.25rem;
   }
   .main__bigBox {
@@ -285,6 +299,9 @@
   .main__bigBoxOutputSection {
     width: 50%;
     gap: 5.9375rem;
+  }
+  #zeroCheck {
+    margin-right: 2.8125rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -85,6 +85,11 @@
                             color: $vdCyan;
                             cursor: pointer;
                         }
+
+                        &.active {
+                            background-color: $strongCyan;
+                            color: $vdCyan;
+                        }
                     }
                 }
             }
@@ -152,6 +157,15 @@
                 border-radius: toRem(5);
                 transition: ease-in-out 0.3s;
 
+                &.disabled {
+                    opacity:  0.3;
+
+                    &:hover {
+                        cursor: not-allowed;
+                        background-color: $strongCyan;
+                    }
+                }
+
                 &Header {
                     font-size: toRem(19);
                 }
@@ -182,7 +196,7 @@
 
 @media (min-width: $breakDesktop) {
     .container {
-        max-width: toRem(900);
+        max-width: toRem(700);
         margin-bottom: toRem(100);
     }
     .main__bigBox {
@@ -208,5 +222,9 @@
             width: 50%;
             gap: toRem(95);
         }
+    }
+
+    #zeroCheck {
+        margin-right: toRem(45);
     }
 }
