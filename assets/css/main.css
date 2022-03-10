@@ -21,7 +21,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #c5e4e7;
 }
 
@@ -271,6 +271,46 @@
 
 .shown {
   display: block !important;
+}
+
+.btnOverlay {
+  width: 100%;
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  font-family: "Space Mono";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.25rem;
+  border-radius: 0.3125rem;
+  z-index: 99;
+}
+
+.accentedItem {
+  padding: 0;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+  position: relative;
+}
+
+#tipInp {
+  position: absolute;
+  width: 100%;
+  border-radius: 0.3125rem;
+  height: 2.5rem;
+  font-family: "Space Mono";
+  font-size: 1.25rem;
+}
+
+.overlayHide {
+  display: none;
 }
 
 @media (min-width: 1440px) {

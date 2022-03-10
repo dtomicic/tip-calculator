@@ -7,6 +7,8 @@ const reset = document.getElementById('resetBtn');
 const fivePercent = document.getElementById('5p');
 const btn = document.getElementsByClassName
 ('main__bigBoxInputSectionTipPresetsItem');
+const overlay = document.getElementById('overlay');
+const customAmount = document.getElementById('tipInp');
 
 
 
@@ -16,8 +18,15 @@ document.querySelectorAll('.main__bigBoxInputSectionTipPresetsItem')
     element.addEventListener('click', () => {
         document.querySelector('.active').classList.remove('active');
         element.classList.toggle('active');
+        reset.classList.remove('disabled');
+        overlay.classList.remove('overlayHide');
         if(bill.value > 0 && people.value > 0){
             calculate();
+            console.log(bill.value);
+        }
+
+        if (element.classList.contains('accentedItem')) {
+            overlay.classList.toggle('overlayHide');
         }
     })
 })
@@ -46,6 +55,12 @@ people.addEventListener('input', () =>  {
     }
 })
 
+customAmount.addEventListener('input', () => {
+    if (customAmount.value > 0 && customAmount.value < 100) {
+        calculate();
+    }
+})
+
 // Reset btn
 reset.addEventListener('click', () => {
 
@@ -57,6 +72,7 @@ reset.addEventListener('click', () => {
     fivePercent.classList.add('active');
     zeroCheck.classList.remove('shown');
     reset.classList.add('disabled');
+    overlay.classList.remove('overlayHide')
 })
 
 
@@ -92,6 +108,12 @@ function calculate() {
         tipFinal = ((billValue * 0.50) / peopleValue).toFixed(2);
         tipAmount.innerHTML = "$" + `${tipFinal}`;
     }
+    else if(btn[5].classList.contains('active')){
+        const percentage = customAmount.value / 100;
+
+        tipFinal = ((billValue * percentage) / peopleValue).toFixed(2);
+        tipAmount.innerHTML = "$" + `${tipFinal}`;
+    }
     // Calculate final
 
     totalFinal = (billValue / peopleValue) + parseFloat(tipFinal);
@@ -102,8 +124,5 @@ function calculate() {
     else {
         totalAmount.innerHTML = "$" + `${parseFloat(totalFinal).toFixed(2)}`;
     }
-
-    console.log(tipFinal);
-    console.log(totalFinal);
 }
 
