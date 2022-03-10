@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background-color: $lgCyan;
 
     &__logo {
@@ -191,6 +191,40 @@
 .shown {
     display: block!important;
 }
+
+.btnOverlay {
+    width: 100%;
+    background-color: $vlCyan;
+    color: $dgCyan;
+    font-family: $mainFont;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: toRem(20);
+    border-radius: toRem(5);
+    z-index: 99;
+}
+
+.accentedItem {
+    padding: 0;
+    align-items: unset;
+    position: relative;
+}
+
+#tipInp {
+    position: absolute;
+    width: 100%;
+    border-radius: toRem(5);
+    height: toRem(40);
+    font-family: $mainFont;
+    font-size: toRem(20);
+}
+
+.overlayHide {
+    display: none;
+}
+
+
 
 // Breakpoints
 
